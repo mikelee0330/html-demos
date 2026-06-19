@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">北京行程市中心細部示意圖</title>
+  <desc id="desc">示意王府井、天安門、故宮、前門、崇文門、天壇、西單與胡同區的相對方位。</desc>
+  <defs>
+    <style>
+      .bg{fill:#fbf6ec}.panel{fill:#fffdf8;stroke:#dfd0bd;stroke-width:2}.axis{stroke:#d8c4aa;stroke-width:5;stroke-linecap:round}.route{fill:none;stroke:#b63d2f;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.routeB{fill:none;stroke:#2f6b56;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}.label{font-family:"PingFang TC","Noto Sans TC",sans-serif;fill:#26231f}.muted{fill:#6f675f}.title{font-size:46px;font-weight:800}.small{font-size:22px}.tiny{font-size:18px}.node{stroke:#fffdf8;stroke-width:5}.stay{fill:#2f6b56}.classic{fill:#b63d2f}.shop{fill:#b47a2c}.hutong{fill:#7b5aa6}.park{fill:#3d5f85}.day{font-size:18px;font-weight:800;fill:#fffdf8}.zone{fill:#f6ead8;stroke:#e0ccb2;stroke-width:2}.water{fill:#dcebf2;stroke:#aac8d5}.shadow{filter:url(#shadow)}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#5c3d20" flood-opacity=".15"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#b63d2f"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="820"/>
+  <rect x="44" y="44" width="1112" height="732" rx="18" class="panel shadow"/>
+  <text x="86" y="110" class="label title">市中心細部：前半段住這裡最省力</text>
+  <text x="88" y="148" class="label small muted">7/9-7/11 與 7/14 胡同日的相對位置</text>
+
+  <line x1="585" y1="190" x2="585" y2="680" class="axis"/>
+  <text x="606" y="214" class="label tiny muted">北京中軸線</text>
+  <path d="M250 428 C410 390 585 390 900 410" class="axis"/>
+  <text x="884" y="392" class="label tiny muted">往東：國貿／湯泉／環球</text>
+  <text x="180" y="410" class="label tiny muted">往西：西單</text>
+
+  <rect x="655" y="270" width="210" height="120" rx="14" class="zone"/>
+  <text x="682" y="310" class="label small" font-weight="800">住宿候選帶</text>
+  <text x="682" y="342" class="label tiny muted">王府井／東單</text>
+  <text x="682" y="370" class="label tiny muted">吃飯、商場、叫車方便</text>
+
+  <path d="M748 332 L640 350 L585 404 L584 510 L615 610" class="route" marker-end="url(#arrow)"/>
+  <path d="M748 332 L438 392" class="routeB"/>
+  <path d="M748 332 L545 248 L515 225" class="routeB"/>
+
+  <ellipse cx="515" cy="225" rx="82" ry="38" class="water"/>
+  <text x="462" y="232" class="label tiny">什剎海</text>
+  <circle cx="545" cy="248" r="18" class="hutong node"/><text x="540" y="255" text-anchor="middle" class="day">14</text>
+  <text x="568" y="254" class="label tiny">鼓樓／南鑼鼓巷</text>
+
+  <circle cx="748" cy="332" r="20" class="stay node"/>
+  <text x="777" y="338" class="label tiny">王府井住宿／喜悅 B2</text>
+  <circle cx="640" cy="350" r="18" class="shop node"/><text x="635" y="357" text-anchor="middle" class="day">9</text>
+  <text x="490" y="346" class="label tiny">王府井晚餐＋谷子店</text>
+
+  <rect x="505" y="374" width="158" height="88" rx="12" fill="#fff2e8" stroke="#ddb8a7"/>
+  <text x="548" y="408" class="label tiny" font-weight="800">故宮</text>
+  <text x="538" y="436" class="label tiny muted">神武門出</text>
+  <circle cx="585" cy="404" r="18" class="classic node"/><text x="580" y="411" text-anchor="middle" class="day">10</text>
+  <circle cx="585" cy="490" r="16" class="classic node"/>
+  <text x="505" y="495" class="label tiny">天安門</text>
+
+  <circle cx="548" cy="550" r="16" class="shop node"/>
+  <text x="420" y="556" class="label tiny">前門／大柵欄</text>
+  <circle cx="438" cy="392" r="17" class="shop node"/>
+  <text x="302" y="398" class="label tiny">西單華威備選</text>
+  <circle cx="690" cy="525" r="17" class="shop node"/>
+  <text x="718" y="532" class="label tiny">崇文門搜秀城</text>
+  <circle cx="615" cy="610" r="18" class="park node"/><text x="610" y="617" text-anchor="middle" class="day">11</text>
+  <text x="638" y="617" class="label tiny">天壇</text>
+
+  <rect x="112" y="610" width="400" height="74" rx="12" fill="#fff7ea" stroke="#dfd0bd"/>
+  <text x="138" y="642" class="label tiny" font-weight="800">結論</text>
+  <text x="138" y="672" class="label tiny muted">王府井／東單／崇文門／前門都能支撐前半段行程。</text>
+</svg>

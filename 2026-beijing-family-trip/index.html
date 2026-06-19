@@ -295,6 +295,29 @@
 
     .sources a { color: var(--blue); }
 
+    .map-card {
+      padding: 14px;
+    }
+
+    .map-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      border: 1px solid var(--line);
+      background: #fffdf8;
+    }
+
+    .map-card h3 {
+      margin: 14px 8px 8px;
+    }
+
+    .map-card p {
+      margin: 0 8px 8px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
     footer {
       padding: 34px 0 54px;
       border-top: 1px solid var(--line);
@@ -343,6 +366,7 @@
   <nav>
     <div class="wrap">
       <a href="#overview">總覽</a>
+      <a href="#maps">路線地圖</a>
       <a href="#hotel">住宿策略</a>
       <a href="#route">每日行程</a>
       <a href="#themes">專題亮點</a>
@@ -381,6 +405,36 @@
               <p>7/14 轉到通州，7/15 整天北京環球影城，不再從市中心來回，體力會差很多。</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="maps">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>路線地圖</h2>
+            <p class="note">這些是方位示意圖，用來判斷住宿和移動方向是否順，不作導航用。等飯店確定後，可再把飯店點位加上去。</p>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card map-card">
+            <img src="./assets/beijing-route-overview.svg" alt="北京親子行程全程方位總覽">
+            <h3>全程總覽</h3>
+            <p>前半段集中在市中心與西北園林，7/14 往東側湯泉，7/15 接通州環球。</p>
+          </article>
+          <div class="grid two">
+            <article class="card map-card">
+              <img src="./assets/beijing-city-center-map.svg" alt="北京行程市中心細部示意圖">
+              <h3>市中心細部</h3>
+              <p>王府井、天安門、故宮、前門、崇文門、天壇、西單與胡同區的相對位置。</p>
+            </article>
+            <article class="card map-card">
+              <img src="./assets/beijing-west-east-transfer.svg" alt="北京西北園林與東側轉場示意圖">
+              <h3>西北園林到東側轉場</h3>
+              <p>頤和園、圓明園從市中心往返；湯泉後接環球附近住宿，動線較順。</p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
