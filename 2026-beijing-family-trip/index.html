@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026 北京親子行程｜7/9-7/16</title>
+  <style>
+    :root {
+      --ink: #26231f;
+      --muted: #6f675f;
+      --paper: #fbf6ec;
+      --panel: #fffdf8;
+      --line: #dfd0bd;
+      --red: #b63d2f;
+      --green: #2f6b56;
+      --blue: #3d5f85;
+      --gold: #b47a2c;
+      --shadow: 0 18px 50px rgba(66, 45, 24, .13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(182,61,47,.14), transparent 28rem),
+        radial-gradient(circle at 92% 26%, rgba(47,107,86,.13), transparent 26rem),
+        linear-gradient(180deg, #fffaf2 0%, var(--paper) 44%, #f3eadb 100%);
+      font-family: "PingFang TC", "Noto Serif TC", "Songti TC", Georgia, serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      min-height: 88vh;
+      display: grid;
+      align-items: end;
+      padding: 28px 0 48px;
+      background:
+        linear-gradient(180deg, rgba(26,22,18,.16), rgba(26,22,18,.58)),
+        url("https://upload.wikimedia.org/wikipedia/commons/9/91/Forbidden_City_%28146231977%29.jpeg") center/cover;
+      color: #fffaf2;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(251, 246, 236, .9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(114, 92, 66, .2);
+    }
+
+    nav .wrap {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+
+    nav a {
+      white-space: nowrap;
+      text-decoration: none;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 14px;
+      background: rgba(255,255,255,.56);
+      font-size: 14px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 20px;
+      max-width: 860px;
+      text-shadow: 0 2px 18px rgba(0,0,0,.35);
+    }
+
+    .eyebrow {
+      width: fit-content;
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 999px;
+      background: rgba(0,0,0,.18);
+      font-size: 14px;
+      letter-spacing: .08em;
+    }
+
+    h1, h2, h3 { margin: 0; line-height: 1.12; letter-spacing: 0; }
+    h1 { font-size: clamp(42px, 8vw, 86px); max-width: 10ch; }
+    h2 { font-size: clamp(30px, 5vw, 52px); }
+    h3 { font-size: 22px; }
+    p { margin: 0; }
+
+    .hero p { max-width: 670px; font-size: clamp(17px, 2vw, 22px); }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid rgba(255,255,255,.4);
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: rgba(0,0,0,.22);
+      font-size: 14px;
+    }
+
+    section { padding: 70px 0; }
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: end;
+      margin-bottom: 26px;
+    }
+
+    .note {
+      color: var(--muted);
+      max-width: 680px;
+      font-size: 15px;
+    }
+
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .card {
+      background: rgba(255,253,248,.88);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card.pad { padding: 22px; }
+    .photo {
+      min-height: 260px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 20%, rgba(0,0,0,.46));
+    }
+
+    .photo span {
+      position: absolute;
+      z-index: 1;
+      left: 18px;
+      bottom: 16px;
+      color: white;
+      font-weight: 700;
+      font-size: 22px;
+      text-shadow: 0 2px 14px rgba(0,0,0,.55);
+    }
+
+    .route {
+      display: grid;
+      gap: 14px;
+      counter-reset: day;
+    }
+
+    .day {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,253,248,.82);
+    }
+
+    .date {
+      border-left: 5px solid var(--red);
+      padding-left: 12px;
+      font-weight: 800;
+      color: var(--red);
+    }
+
+    .date small {
+      display: block;
+      color: var(--muted);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .day h3 { margin-bottom: 8px; }
+    .slots {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .slot {
+      min-height: 104px;
+      padding: 11px;
+      border-radius: 8px;
+      background: #f5ead9;
+      border: 1px solid #ead7bf;
+      font-size: 14px;
+    }
+
+    .slot b {
+      display: block;
+      color: var(--green);
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .tagline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: #efe0ca;
+      color: #5b4430;
+      font-size: 13px;
+    }
+
+    .stay {
+      border-top: 5px solid var(--green);
+    }
+
+    .stay h3, .focus h3 { margin-bottom: 10px; }
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .checklist li {
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .focus {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 20px;
+      align-items: stretch;
+      margin-bottom: 20px;
+    }
+
+    .focus .card { min-height: 100%; }
+    .mini-map {
+      display: grid;
+      gap: 12px;
+      padding: 18px;
+    }
+
+    .line {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 12px;
+      align-items: start;
+      border-bottom: 1px dashed var(--line);
+      padding-bottom: 12px;
+    }
+
+    .line:last-child { border-bottom: 0; padding-bottom: 0; }
+    .line b { color: var(--blue); }
+
+    .sources {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .sources a { color: var(--blue); }
+
+    footer {
+      padding: 34px 0 54px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      header { min-height: 76vh; }
+      .section-head, .grid.two, .grid.three, .focus { grid-template-columns: 1fr; }
+      .day { grid-template-columns: 1fr; }
+      .slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { width: min(100% - 22px, 1120px); }
+      section { padding: 48px 0; }
+      .slots { grid-template-columns: 1fr; }
+      .photo { min-height: 210px; }
+    }
+
+    @media print {
+      nav { display: none; }
+      header { min-height: auto; padding: 46px 0; color: var(--ink); background: none; }
+      .hero { text-shadow: none; }
+      .pill, .eyebrow { color: var(--ink); background: transparent; border-color: var(--line); }
+      .card, .day { box-shadow: none; break-inside: avoid; }
+      section { padding: 26px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <div class="eyebrow">2026/7/9 Thu - 7/16 Thu｜兩大兩小</div>
+      <h1>北京親子慢旅行</h1>
+      <p>每天一個主景點，搭配冷氣商場、谷子店、湯泉回血日與環球影城。主方案採「市中心住宿 + 環球附近住宿」，減少暑假移動疲勞。</p>
+      <div class="hero-meta">
+        <span class="pill">住宿：王府井／東單／崇文門／前門 + 通州環球</span>
+        <span class="pill">妹妹亮點：王府井喜悅 B2 谷子店</span>
+        <span class="pill">訂前確認：故宮、天安門、環球、湯泉外賓規則</span>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="wrap">
+      <a href="#overview">總覽</a>
+      <a href="#hotel">住宿策略</a>
+      <a href="#route">每日行程</a>
+      <a href="#themes">專題亮點</a>
+      <a href="#booking">訂前清單</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="overview">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>家人版重點</h2>
+            <p class="note">這版先把 ChatGPT 交接內容整理成可分享頁面。之後你從小紅書看到的特色行程，可以直接加到「專題亮點」或對應日期。</p>
+          </div>
+        </div>
+        <div class="grid three">
+          <article class="card">
+            <div class="photo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/28/Wangfujing_street%2C_Beijing.JPG')"><span>王府井開場</span></div>
+            <div class="card pad">
+              <h3>抵達日不奔波</h3>
+              <p>入住市中心後只排晚餐、散步和王府井喜悅 B2。第一天先讓小朋友有期待，大人也不用硬跑景點。</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="photo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/d/db/Longevity_Hill_of_the_Summer_Palace.jpg')"><span>皇家園林半日</span></div>
+            <div class="card pad">
+              <h3>古蹟只排半天強度</h3>
+              <p>故宮、天壇、頤和園、圓明園都控制節奏，下午保留飯店或商場休息，避免 7 月北京太熱。</p>
+            </div>
+          </article>
+          <article class="card">
+            <div class="photo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/7/72/Entrance_of_Universal_Studios_Beijing_%2820210907121707%29.jpg')"><span>環球不趕車</span></div>
+            <div class="card pad">
+              <h3>前一晚住環球附近</h3>
+              <p>7/14 轉到通州，7/15 整天北京環球影城，不再從市中心來回，體力會差很多。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="hotel">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>住宿策略</h2>
+            <p class="note">目前最推薦方案 B：前 5 晚住核心市區，最後 1-2 晚靠近環球。湯泉是否過夜要等訂前確認外賓、親子與房型規則。</p>
+          </div>
+        </div>
+        <div class="grid two">
+          <article class="card pad stay">
+            <h3>7/9-7/14｜市中心基地</h3>
+            <p>優先看王府井、東單、崇文門、前門。去天安門、故宮、天壇方便，晚上吃飯和叫車也簡單。</p>
+            <ul class="checklist">
+              <li>親子房或雙床房，確認可住兩大兩小。</li>
+              <li>離地鐵或可叫車上落點近，不要藏在小巷深處。</li>
+              <li>早餐不是必要，但暑假早出門時很省事。</li>
+              <li>故宮日最好能下午回飯店休息。</li>
+            </ul>
+          </article>
+          <article class="card pad stay">
+            <h3>7/14-7/16｜通州環球段</h3>
+            <p>環球影城前一晚換到環球附近，7/15 早入園，晚上 CityWalk 吃飯後不用再長途回市區。</p>
+            <ul class="checklist">
+              <li>優先看可步行、接駁或短程叫車到環球的飯店。</li>
+              <li>若 7/14 住湯泉，需確認是否有家庭客房。</li>
+              <li>7/16 回程交通要回推到機場／高鐵站時間。</li>
+              <li>暑假價格可能浮動，訂可取消方案較好。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="route">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>每日行程</h2>
+            <p class="note">原則：上午主景點，中午後降溫休息，晚上只排商圈、餐廳或輕體驗。若當天太熱或下雨，優先刪下午戶外。</p>
+          </div>
+        </div>
+        <div class="route">
+          <article class="day">
+            <div class="date">7/9<small>週四｜抵達</small></div>
+            <div>
+              <h3>抵達北京 + 王府井 + 谷子店開場</h3>
+              <p>入住市中心，晚上王府井吃飯，安排王府井喜悅購物中心 B2，讓妹妹先有專屬亮點。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>出發／飛行或高鐵</div>
+                <div class="slot"><b>中午</b>抵達後叫車到飯店</div>
+                <div class="slot"><b>下午</b>入住、休息、附近熟悉環境</div>
+                <div class="slot"><b>晚上</b>王府井晚餐 + 喜悅 B2 谷子店</div>
+              </div>
+              <div class="tagline"><span class="tag">不排硬景點</span><span class="tag">短程步行</span><span class="tag">先買一點就好</span></div>
+            </div>
+          </article>
+
+          <article class="day">
+            <div class="date">7/10<small>週五｜中軸線</small></div>
+            <div>
+              <h3>天安門 + 故宮</h3>
+              <p>最重要的一天。走午門進、神武門出，下午回飯店回血；若體力好才加景山看故宮全景。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>天安門安檢 + 午門入故宮</div>
+                <div class="slot"><b>中午</b>故宮內簡餐或出神武門後用餐</div>
+                <div class="slot"><b>下午</b>回飯店休息；體力好才景山</div>
+                <div class="slot"><b>晚上</b>前門／大柵欄／西單擇一</div>
+              </div>
+              <div class="tagline"><span class="tag">需提前預約</span><span class="tag">暑假早出門</span><span class="tag">西單華威可備選</span></div>
+            </div>
+          </article>
+
+          <article class="day">
+            <div class="date">7/11<small>週六｜天壇</small></div>
+            <div>
+              <h3>天壇公園 + 崇文門／前門</h3>
+              <p>上午看祈年殿、圜丘壇、回音壁，下午用崇文門或前門商場休息，搜秀城可作谷子備選。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>天壇核心景點慢走</div>
+                <div class="slot"><b>中午</b>崇文門或前門吃飯</div>
+                <div class="slot"><b>下午</b>商場冷氣休息／搜秀城備選</div>
+                <div class="slot"><b>晚上</b>北京菜、涮羊肉或烤鴨</div>
+              </div>
+              <div class="tagline"><span class="tag">動線順</span><span class="tag">下午室內</span><span class="tag">週末避開過量行程</span></div>
+            </div>
+          </article>
+
+          <article class="day">
+            <div class="date">7/12<small>週日｜頤和園</small></div>
+            <div>
+              <h3>頤和園半日慢遊</h3>
+              <p>北宮門進，走蘇州街、長廊、石舫、昆明湖、十七孔橋，新建宮門出。可搭船減少步行。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>頤和園主線慢走</div>
+                <div class="slot"><b>中午</b>園區附近或回市區吃飯</div>
+                <div class="slot"><b>下午</b>飯店休息，不硬塞圓明園</div>
+                <div class="slot"><b>晚上</b>安排一餐好吃的餐廳</div>
+              </div>
+              <div class="tagline"><span class="tag">親子版 3-4 小時</span><span class="tag">可搭船</span><span class="tag">防曬補水</span></div>
+            </div>
+          </article>
+
+          <article class="day">
+            <div class="date">7/13<small>週一｜海淀</small></div>
+            <div>
+              <h3>圓明園 + 海淀商圈</h3>
+              <p>故宮週一通常閉館，所以這天排戶外園林。圓明園只看西洋樓遺址、大水法和湖區，不全園硬走。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>圓明園 2-3 小時</div>
+                <div class="slot"><b>中午</b>海淀商圈吃飯</div>
+                <div class="slot"><b>下午</b>嘻番里備選，或直接回飯店</div>
+                <div class="slot"><b>晚上</b>可排湯泉，或保留早睡</div>
+              </div>
+              <div class="tagline"><span class="tag">別走全園</span><span class="tag">嘻番里看體力</span><span class="tag">可刪減</span></div>
+            </div>
+          </article>
+
+          <article class="day">
+            <div class="date">7/14<small>週二｜回血日</small></div>
+            <div>
+              <h3>胡同輕鬆日 + 湯泉 + 移動環球附近</h3>
+              <p>睡晚一點。什剎海、烟袋斜街、鼓樓外觀、南鑼鼓巷擇一段即可；傍晚湯泉，晚上轉通州。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>睡晚、退房、寄放行李</div>
+                <div class="slot"><b>中午</b>什剎海／南鑼鼓巷輕走</div>
+                <div class="slot"><b>下午</b>湯泉生活館長時間休息</div>
+                <div class="slot"><b>晚上</b>移動到環球附近飯店或住湯泉</div>
+              </div>
+              <div class="tagline"><span class="tag">回血日</span><span class="tag">湯泉外賓規則需確認</span><span class="tag">行李動線重要</span></div>
+            </div>
+          </article>
+
+          <article class="day">
+            <div class="date">7/15<small>週三｜環球</small></div>
+            <div>
+              <h3>北京環球影城整天</h3>
+              <p>不排其他景點。哈利波特、變形金剛、功夫熊貓、小黃人、侏羅紀世界依入園狀況調整。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>早入園，先衝熱門區</div>
+                <div class="slot"><b>中午</b>園區內用餐，避開尖峰排隊</div>
+                <div class="slot"><b>下午</b>室內表演／較涼區域穿插</div>
+                <div class="slot"><b>晚上</b>CityWalk 晚餐，回附近飯店</div>
+              </div>
+              <div class="tagline"><span class="tag">暑假評估快速通關</span><span class="tag">帶雨具</span><span class="tag">不要市區來回</span></div>
+            </div>
+          </article>
+
+          <article class="day">
+            <div class="date">7/16<small>週四｜回程</small></div>
+            <div>
+              <h3>早餐 + 回程</h3>
+              <p>依航班或高鐵時間安排。時間充裕才逛 CityWalk 或飯店附近商場，不排大型景點。</p>
+              <div class="slots">
+                <div class="slot"><b>上午</b>早餐、整理行李</div>
+                <div class="slot"><b>中午</b>視時間吃飯或買伴手禮</div>
+                <div class="slot"><b>下午</b>前往機場／高鐵站</div>
+                <div class="slot"><b>晚上</b>返家</div>
+              </div>
+              <div class="tagline"><span class="tag">留交通緩衝</span><span class="tag">不排大景點</span><span class="tag">伴手禮日</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="themes">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>專題亮點</h2>
+            <p class="note">這裡留給家人快速理解「為什麼這趟不是只有古蹟」。小紅書看到的新行程也可以之後加在這一區。</p>
+          </div>
+        </div>
+
+        <div class="focus">
+          <article class="card">
+            <div class="photo" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/3e/Beijing_hutong_area_5.jpg')"><span>胡同與城市日常</span></div>
+          </article>
+          <article class="card pad">
+            <h3>胡同輕鬆日</h3>
+            <p>7/14 不做深度文化考察，只把什剎海、烟袋斜街、鼓樓外觀、南鑼鼓巷當成散步和吃東西的緩衝日。太熱就縮短，保留湯泉體力。</p>
+          </article>
+        </div>
+
+        <div class="grid three">
+          <article class="card pad">
+            <h3>谷子店路線</h3>
+            <p>首選王府井喜悅購物中心 B2。備選西單華威大廈 3-4F、崇文門搜秀城、海淀嘻番里。</p>
+            <ul class="checklist">
+              <li>先給妹妹 RMB 300-500 預算。</li>
+              <li>盲抽容易失控，建議一個大件加幾個小件。</li>
+              <li>不要一天排三個谷子點。</li>
+            </ul>
+          </article>
+          <article class="card pad">
+            <h3>Gucci 購物模組</h3>
+            <p>交接檔未列具體店點，先放在王府井／SKP／國貿商圈擇一。訂飯店後再依住宿與餐廳動線決定，不為購物單獨拉長車程。</p>
+            <ul class="checklist">
+              <li>若住王府井，可放抵達日或故宮日晚上。</li>
+              <li>若去國貿／SKP，可搭配一餐餐廳。</li>
+              <li>精品行程不和環球同日。</li>
+            </ul>
+          </article>
+          <article class="card pad">
+            <h3>湯泉回血日</h3>
+            <p>優先順序：水裹・湯泉生活四惠／高碑店、悅湯泉管莊京通苑、尚薈湯泉東三環華威里。</p>
+            <ul class="checklist">
+              <li>訂前確認接待台灣旅客／外籍旅客。</li>
+              <li>確認親子過夜、家庭房或公共休息區型態。</li>
+              <li>若不能舒服過夜，就只做 8-16 小時體驗。</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>訂前清單</h2>
+            <p class="note">下面這些是下訂飯店、門票與湯泉前要確認的點。尤其 2026 年 7 月規則仍可能變動，出發前要再查官方資訊。</p>
+          </div>
+        </div>
+        <div class="grid two">
+          <article class="card pad">
+            <h3>最高優先</h3>
+            <div class="mini-map">
+              <div class="line"><b>故宮</b><span>確認預約時間、週一閉館、暑假放票節奏；7/10 是本行程最需要先搶的票。</span></div>
+              <div class="line"><b>天安門</b><span>確認最新預約與安檢規則，和故宮同日安排要留足排隊時間。</span></div>
+              <div class="line"><b>環球</b><span>確認 7/15 營業時間、票價、快速通關價格，暑假旺季可考慮買。</span></div>
+              <div class="line"><b>湯泉</b><span>電話或官方平台確認外賓、親子、過夜、客房與餐飲時間。</span></div>
+            </div>
+          </article>
+          <article class="card pad">
+            <h3>可刪減規則</h3>
+            <div class="mini-map">
+              <div class="line"><b>太熱</b><span>刪下午戶外，改飯店、商場、咖啡、湯泉。</span></div>
+              <div class="line"><b>下雨</b><span>保留故宮、環球視雨勢；園林日改室內商圈或博物館。</span></div>
+              <div class="line"><b>太累</b><span>先刪嘻番里、西單華威、景山；主景點只留半天。</span></div>
+              <div class="line"><b>飯店</b><span>比起便宜一點，更優先交通、可取消、親子房型與回房休息便利。</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap sources">
+      <p>資料基礎：本地交接檔 <code>beijing_family_trip_codex_handoff.md</code>。官方資訊可從 <a href="https://intl.dpm.org.cn/index.html?l=en">故宮博物院</a>、<a href="https://www.universalbeijingresort.com/en/park-schedule">北京環球影城營業時間</a>、<a href="https://www.universalbeijingresort.com/en/tickets-offers">北京環球票券與快速通關</a> 再確認。</p>
+      <p>圖片來源：Wikimedia Commons，包含故宮、王府井、頤和園、北京環球與胡同照片。分享給家人前若要完全離線使用，可再把圖片下載到本機。</p>
+    </div>
+  </footer>
+</body>
+</html>
