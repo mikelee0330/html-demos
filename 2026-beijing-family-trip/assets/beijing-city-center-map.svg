@@ -20,7 +20,7 @@
   <line x1="585" y1="190" x2="585" y2="680" class="axis"/>
   <text x="606" y="214" class="label tiny muted">北京中軸線</text>
   <path d="M250 428 C410 390 585 390 900 410" class="axis"/>
-  <text x="884" y="392" class="label tiny muted">往東：國貿／湯泉／環球</text>
+  <text x="884" y="392" class="label tiny muted">往東：國貿／環球</text>
   <text x="180" y="410" class="label tiny muted">往西：西單</text>
 
   <rect x="655" y="270" width="210" height="120" rx="14" class="zone"/>
