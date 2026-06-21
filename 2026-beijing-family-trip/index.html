@@ -318,6 +318,30 @@
       font-size: 15px;
     }
 
+    table.budget {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,253,248,.88);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .budget th,
+    .budget td {
+      border: 1px solid var(--line);
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    .budget th {
+      background: #f5ead9;
+      color: var(--green);
+    }
+
     footer {
       padding: 34px 0 54px;
       border-top: 1px solid var(--line);
@@ -366,6 +390,7 @@
   <nav>
     <div class="wrap">
       <a href="#overview">總覽</a>
+      <a href="#costs">費用支出</a>
       <a href="#maps">路線地圖</a>
       <a href="#hotel">住宿策略</a>
       <a href="#route">每日行程</a>
@@ -407,6 +432,41 @@
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section id="costs">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>費用支出</h2>
+            <p class="note">目前總額約 NT$119,476。已支付：機票、住宿。尚未下訂：北京環球票券。住宿逐晚金額相加為 NT$41,769，與暫定總額 NT$40,773 差 NT$996，待對帳。</p>
+          </div>
+        </div>
+        <table class="budget">
+          <tr><th>類別</th><th>金額</th><th>付款狀態</th><th>備註</th></tr>
+          <tr><td>北京機票</td><td>NT$44,459</td><td>已支付</td><td>3 人費用：Mike + 兩個小孩；Kelly 另用換票。去程 7/9 15:25-18:50；回程 7/16 20:20-23:40。</td></tr>
+          <tr><td>北京住宿</td><td>NT$40,773</td><td>已支付</td><td>總金額暫定；逐晚明細加總待對帳。</td></tr>
+          <tr><td>北京環球</td><td>NT$34,244</td><td>尚未下訂</td><td>Trip.com 暫抓 5 項優速通 + 導覽服務 +《不可馴服》演出觀賞位。</td></tr>
+          <tr><td>總計</td><td>約 NT$119,476</td><td>部分已支付</td><td>機票 NT$44,459 + 住宿 NT$40,773 + 環球 NT$34,244。</td></tr>
+        </table>
+        <div style="height:18px"></div>
+        <table class="budget">
+          <tr><th>日期</th><th>飯店</th><th>金額</th><th>早餐</th><th>取消期限</th><th>行程備註</th></tr>
+          <tr><td>7/9 週四</td><td>北京同潤飯店</td><td>NT$4,297</td><td>含早餐</td><td>7/9 18:00 前</td><td>王府井 + 谷子店開場</td></tr>
+          <tr><td>7/10 週五</td><td>北京同潤飯店</td><td>NT$4,297</td><td>含早餐</td><td>7/9 18:00 前</td><td>天安門 + 故宮</td></tr>
+          <tr><td>7/11 週六</td><td>北京同潤飯店</td><td>NT$4,297</td><td>含早餐</td><td>7/9 18:00 前</td><td>天壇公園 + 崇文門／前門</td></tr>
+          <tr><td>7/12 週日</td><td>北京粵財 JW 萬豪飯店</td><td>NT$7,602</td><td>含早餐</td><td>7/11 23:59 前</td><td>頤和園半日慢遊＋胡同輕鬆日</td></tr>
+          <tr><td>7/13 週一</td><td>北京粵財 JW 萬豪飯店</td><td>NT$7,602</td><td>含早餐</td><td>7/11 23:59 前</td><td>慕田峪長城親子版</td></tr>
+          <tr><td>7/14 週二</td><td>環球影城大飯店</td><td>NT$9,251</td><td>不含早餐</td><td>7/12 14:00 前</td><td>15:00 入住；隔天 08:30 入園</td></tr>
+          <tr><td>7/15 週三</td><td>北京通州環球度假區麗柏飯店</td><td>NT$4,423</td><td>未標早餐</td><td>7/15 12:00 前</td><td>20:00 離開環球後接駁入住</td></tr>
+        </table>
+        <div style="height:18px"></div>
+        <table class="budget">
+          <tr><th>平台</th><th>成人</th><th>兒童</th><th>一家四口</th><th>內容</th></tr>
+          <tr><td>Trip.com</td><td>NT$8,808 × 2</td><td>NT$8,314 × 2</td><td>NT$34,244</td><td>5 項優速通 + 導覽服務 +《不可馴服》演出觀賞位</td></tr>
+          <tr><td>Klook</td><td>NT$8,881 × 2</td><td>NT$8,015 × 2</td><td>NT$33,792</td><td>內容需下訂前再次確認是否同 Trip.com</td></tr>
+        </table>
       </div>
     </section>
 
