@@ -10,4 +10,5 @@ project-folder/index.html
 
 Current demos:
 
+- `airesv-kpop-demo/`
 - `2026-beijing-family-trip/`
