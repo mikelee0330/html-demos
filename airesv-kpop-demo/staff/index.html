@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0c0a09">
   <base href="../">
+  <script>
+    try {
+      var savedOpsTheme = localStorage.getItem("airesv-ops-theme");
+      if (savedOpsTheme === "light" || savedOpsTheme === "dark") document.documentElement.dataset.opsTheme = savedOpsTheme;
+    } catch (error) {}
+  </script>
   <title>Airesv Ops｜BABYMONSTER 工作人員端</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="./shared.css">
